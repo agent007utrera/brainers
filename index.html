@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas y Respuestas</title>
     <script>
+        let preguntas = [];
+        let respuestas = [];
+        let indicesMostrados = [];
+
         async function cargarArchivo(archivo) {
             const respuesta = await fetch(archivo);
             if (!respuesta.ok) {
@@ -13,31 +17,59 @@
             return respuesta.text();
         }
 
+        function seleccionarPregunta() {
+            // Si todas las preguntas han sido mostradas, reinicia la lista
+            if (indicesMostrados.length === preguntas.length) {
+                indicesMostrados = [];
+            }
+
+            // Selecciona un índice que no se haya mostrado
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * preguntas.length);
+            } while (indicesMostrados.includes(randomIndex));
+            
+            indicesMostrados.push(randomIndex);
+            return randomIndex;
+        }
+
         async function inicializar() {
             try {
                 const preguntasTexto = await cargarArchivo('preguntas.txt');
                 const respuestasTexto = await cargarArchivo('respuestas.txt');
                 
-                const preguntas = preguntasTexto.split('\n').filter(p => p.trim() !== '');
-                const respuestas = respuestasTexto.split('\n').filter(r => r.trim() !== '');
+                preguntas = preguntasTexto.split('\n').filter(p => p.trim() !== '');
+                respuestas = respuestasTexto.split('\n').filter(r => r.trim() !== '');
 
                 if (preguntas.length !== respuestas.length) {
                     alert("El número de preguntas y respuestas no coincide.");
                     return;
                 }
 
-                const randomIndex = Math.floor(Math.random() * preguntas.length);
-                const preguntaSeleccionada = preguntas[randomIndex];
-                const respuestaSeleccionada = respuestas[randomIndex];
-
-                document.getElementById('pregunta').textContent = preguntaSeleccionada;
-                document.getElementById('botonRespuesta').onclick = () => {
-                    document.getElementById('respuesta').textContent = respuestaSeleccionada;
-                };
+                mostrarNuevaPregunta();
             } catch (error) {
                 console.error(error);
                 alert('Hubo un error al cargar los archivos.');
             }
+        }
+
+        function mostrarNuevaPregunta() {
+            const randomIndex = seleccionarPregunta();
+            const preguntaSeleccionada = preguntas[randomIndex];
+            const respuestaSeleccionada = respuestas[randomIndex];
+
+            document.getElementById('pregunta').textContent = preguntaSeleccionada;
+            document.getElementById('respuesta').textContent = '';
+            document.getElementById('botonRespuesta').style.display = 'inline';
+            document.getElementById('botonContinuar').style.display = 'none';
+
+            document.getElementById('botonRespuesta').onclick = () => {
+                document.getElementById('respuesta').textContent = respuestaSeleccionada;
+                document.getElementById('botonRespuesta').style.display = 'none';
+                document.getElementById('botonContinuar').style.display = 'inline';
+            };
+
+            document.getElementById('botonContinuar').onclick = mostrarNuevaPregunta;
         }
     </script>
 </head>
@@ -46,6 +78,7 @@
     <div>
         <p><strong>Pregunta:</strong> <span id="pregunta">Cargando...</span></p>
         <button id="botonRespuesta">Mostrar Respuesta</button>
+        <button id="botonContinuar" style="display: none;">Continuar</button>
         <p><strong>Respuesta:</strong> <span id="respuesta"></span></p>
     </div>
 </body>
