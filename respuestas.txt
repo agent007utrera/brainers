@@ -1,4 +1,4 @@
-687 días
+687 dÃ­as
 194
 50
 54
@@ -35,13 +35,13 @@
 1300
 11,3 Km.
 80 %
-470 ºC
+470 ÂºC
 4 cm.
 92
-2º
+2Âº
 1825
 19
--50 ºC
+-50 ÂºC
 435.000
 40.000
 100
@@ -63,16 +63,16 @@
 22
 150 millones
 1949
-20 años
+20 aÃ±os
 9
 37
 43
 6
 28
-10 años
+10 aÃ±os
 2227
 12
-27 años
+27 aÃ±os
 23
 1966
 95062
@@ -83,13 +83,13 @@
 73 a.c.
 1974
 1971
-70 años
+70 aÃ±os
 1725
 500.000
 1993
 509 a.c.
 27 a.c.
-32 años
+32 aÃ±os
 31
 1
 4
@@ -107,8 +107,8 @@
 10
 1495
 1829
-116 años
-17 años
+116 aÃ±os
+17 aÃ±os
 8
 1250
 250
@@ -116,7 +116,7 @@
 1941
 14
 9
-8 años
+8 aÃ±os
 1824
 38 minutos
 23 horas
@@ -124,7 +124,7 @@
 5
 2500
 24
-24 años
+24 aÃ±os
 1457
 1707
 12
@@ -135,10 +135,10 @@
 23
 13
 1789
-29 años
+29 aÃ±os
 10
 888
-2700 años
+2700 aÃ±os
 50
 10 a.c.
 140
@@ -146,7 +146,7 @@
 1901
 10
 67
-33 años
+33 aÃ±os
 105
 79
 650
@@ -161,15 +161,15 @@
 160000
 370
 200
-6 días
+6 dÃ­as
 36
 12
 1664
 1054
 1994
 1890
-17 días
-18 años
+17 dÃ­as
+18 aÃ±os
 1500
 110
 13
@@ -180,7 +180,7 @@
 108
 500
 233
-8 años
+8 aÃ±os
 0
 171
 17
@@ -191,50 +191,50 @@
 29
 1990
 5 Minutos
-165 Kilómetros por hora
+165 KilÃ³metros por hora
 4000 Kilos
 540 Litros
-50 Kilómetros por hora
-200 Centímetros
-9,8 Centímetros
+50 KilÃ³metros por hora
+200 CentÃ­metros
+9,8 CentÃ­metros
 1869
 0,4 Centimetros
 17
 6 Millones
-300 kilómetros por hora 
+300 kilÃ³metros por hora 
 0,33 Segundos
 34.000 Litros
 7200 Litros
-0,26 Centímetros
+0,26 CentÃ­metros
 1960
 1796
 70 Mililitros
-10 Días
+10 DÃ­as
 300 Litros
 33
 9 Kilos
-34,3 Centímetros
+34,3 CentÃ­metros
 1500 gramos
 6
 11
 5,4 Millones
-110 Días
-40 Milímetros
+110 DÃ­as
+40 MilÃ­metros
 100 Tazas
 1890
 1891
 1975
-49,1 Años
-20 Años
+49,1 AÃ±os
+20 AÃ±os
 197
 En torno a los 100 Millones
 600
 10 Litros
-1 millón
+1 millÃ³n
 57,5 Horas
-1936 Días
-272 Centímetros
-74 Centímetros
+1936 DÃ­as
+272 CentÃ­metros
+74 CentÃ­metros
 50.000 Personas
 1761
 9 Miligramos
@@ -242,16 +242,16 @@ En torno a los 100 Millones
 1543
 1965
 5 Capas
-25 Milímetros
-23,5 Milímetros
+25 MilÃ­metros
+23,5 MilÃ­metros
 En el siglo XVI
 10 Veces
 7 Gramos
-13 Centímetros
+13 CentÃ­metros
 1677
 5 Gramos por litro
 5 Kilos
-300 Centímetros cúbicos
+300 CentÃ­metros cÃºbicos
 10.000 Aromas
 4 Tipos
 25 Millones de personas
@@ -315,12 +315,12 @@ En el siglo XVI
 7 300 toneladas
 856 columnas
 294 escalones
-182 años
+182 aÃ±os
 102 minutos
-8 851 kilómetros
+8 851 kilÃ³metros
 50 000 personas
 2 570 a. C.
-6 Cariátides
+6 CariÃ¡tides
 1323
 58 ascensores
 1882
@@ -341,12 +341,12 @@ En el siglo XVI
 86.000 millones de neuronas
 17 tiempos verbales
 18 meses
-4.500.000 glóbulos rojos
-120 días
+4.500.000 glÃ³bulos rojos
+120 dÃ­as
 45%
-7.000 nanómetros
+7.000 nanÃ³metros
 95%
-12.500 nanómetros
+12.500 nanÃ³metros
 3999
 11
 2
@@ -357,12 +357,12 @@ En el siglo XVI
 250 ms
 250 Km/s
 3.500 A.C.
-10.000 millones de años
-13.700 millones de años
+10.000 millones de aÃ±os
+13.700 millones de aÃ±os
 1.800 km/h
-100.000 años
+100.000 aÃ±os
 16.000
-20 años
+20 aÃ±os
 4000
 40000
 5000
@@ -431,7 +431,7 @@ En el siglo XVI
 1961
 263 km/h
 65
-41 años
+41 aÃ±os
 1920
 9
 318,979,564,000
@@ -444,22 +444,22 @@ En el siglo XVI
 20km.
 74 letras.
 23,000.
-150 calorías.
+150 calorÃ­as.
 1879.
-10 campos de fútbol.
+10 campos de fÃºtbol.
 965 Km/hr.
 6.600 dolares.
 1938.
 299 792 458 m/s
 18kg
-22 horas, dos horas más que el perezoso.
+22 horas, dos horas mÃ¡s que el perezoso.
 7,200 veces
 Un total de 8 ojos, incluyendo uno al final de cada extremidad.
 Hasta 77kg
 Unos 450 gramos
-Cada 28 años.
+Cada 28 aÃ±os.
 13 segundos.
-9 años.
+9 aÃ±os.
 14 minutos.
 2,598,960.
 1,929,770,160,028,800
@@ -467,14 +467,14 @@ Cada 28 años.
 28 km/h.
 1607
 150 Kgs de metano
-7,5 millones de dólares
+7,5 millones de dÃ³lares
 36 cm
-17 meses y 15 días.
+17 meses y 15 dÃ­as.
 1940.
-37º.
+37Âº.
 99-56-84.
 12 cm
-74 minutos de música para abarcar la duración de la Novena Sinfonía de Bethoven (72m.)
+74 minutos de mÃºsica para abarcar la duraciÃ³n de la Novena SinfonÃ­a de Bethoven (72m.)
 1969
 23 de abril de 1616.
 50,000 palabras
