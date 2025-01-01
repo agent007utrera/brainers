@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas y Respuestas</title>
+    <script>
+        async function cargarArchivo(archivo) {
+            const respuesta = await fetch(archivo);
+            if (!respuesta.ok) {
+                throw new Error(`No se pudo cargar el archivo: ${archivo}`);
+            }
+            return respuesta.text();
+        }
+
+        async function inicializar() {
+            try {
+                const preguntasTexto = await cargarArchivo('preguntas.txt');
+                const respuestasTexto = await cargarArchivo('respuestas.txt');
+                
+                const preguntas = preguntasTexto.split('\n').filter(p => p.trim() !== '');
+                const respuestas = respuestasTexto.split('\n').filter(r => r.trim() !== '');
+
+                if (preguntas.length !== respuestas.length) {
+                    alert("El número de preguntas y respuestas no coincide.");
+                    return;
+                }
+
+                const randomIndex = Math.floor(Math.random() * preguntas.length);
+                const preguntaSeleccionada = preguntas[randomIndex];
+                const respuestaSeleccionada = respuestas[randomIndex];
+
+                document.getElementById('pregunta').textContent = preguntaSeleccionada;
+                document.getElementById('botonRespuesta').onclick = () => {
+                    document.getElementById('respuesta').textContent = respuestaSeleccionada;
+                };
+            } catch (error) {
+                console.error(error);
+                alert('Hubo un error al cargar los archivos.');
+            }
+        }
+    </script>
+</head>
+<body onload="inicializar()">
+    <h1>Juego de Preguntas y Respuestas</h1>
+    <div>
+        <p><strong>Pregunta:</strong> <span id="pregunta">Cargando...</span></p>
+        <button id="botonRespuesta">Mostrar Respuesta</button>
+        <p><strong>Respuesta:</strong> <span id="respuesta"></span></p>
+    </div>
+</body>
+</html>
