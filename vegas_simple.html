@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso de Cartas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        img {
+            margin: 20px;
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Concurso de Cartas</h1>
+    <div id="game">
+        <button id="drawCardButton">SACAR CARTA</button>
+    </div>
+
+    <script>
+        const gameDiv = document.getElementById('game');
+
+        let currentCardNumber = null;
+
+        function getRandomCardNumber() {
+            return Math.floor(Math.random() * 125) + 1;
+        }
+
+        function formatCardNumber(number) {
+            return number.toString().padStart(3, '0');
+        }
+
+        function drawCard() {
+            currentCardNumber = getRandomCardNumber();
+            const cardNumber = formatCardNumber(currentCardNumber);
+            gameDiv.innerHTML = `
+                <img src="${cardNumber}.jpg" alt="Carta ${cardNumber}">
+                <button id="showAnswerButton">RESPUESTA</button>
+                <button id="continueButton">CONTINUAR</button>
+            `;
+
+            document.getElementById('showAnswerButton').addEventListener('click', showAnswer);
+            document.getElementById('continueButton').addEventListener('click', drawCard);
+        }
+
+        function showAnswer() {
+            const answerNumber = formatCardNumber(currentCardNumber);
+            gameDiv.innerHTML = `
+                <img src="r${answerNumber}.jpg" alt="Respuesta ${answerNumber}">
+                <button id="continueButton">CONTINUAR</button>
+            `;
+
+            document.getElementById('continueButton').addEventListener('click', drawCard);
+        }
+
+        document.getElementById('drawCardButton').addEventListener('click', drawCard);
+    </script>
+</body>
+</html>

@@ -1,85 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas y Respuestas</title>
-    <script>
-        let preguntas = [];
-        let respuestas = [];
-        let indicesMostrados = [];
-
-        async function cargarArchivo(archivo) {
-            const respuesta = await fetch(archivo);
-            if (!respuesta.ok) {
-                throw new Error(`No se pudo cargar el archivo: ${archivo}`);
-            }
-            return respuesta.text();
+    <title>Menú</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #0a6e0a; /* Fondo verde */
+            color: #ffd700; /* Texto dorado */
         }
-
-        function seleccionarPregunta() {
-            // Si todas las preguntas han sido mostradas, reinicia la lista
-            if (indicesMostrados.length === preguntas.length) {
-                indicesMostrados = [];
-            }
-
-            // Selecciona un índice que no se haya mostrado
-            let randomIndex;
-            do {
-                randomIndex = Math.floor(Math.random() * preguntas.length);
-            } while (indicesMostrados.includes(randomIndex));
-            
-            indicesMostrados.push(randomIndex);
-            return randomIndex;
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px #000000;
         }
-
-        async function inicializar() {
-            try {
-                const preguntasTexto = await cargarArchivo('preguntas.txt');
-                const respuestasTexto = await cargarArchivo('respuestas.txt');
-                
-                preguntas = preguntasTexto.split('\n').filter(p => p.trim() !== '');
-                respuestas = respuestasTexto.split('\n').filter(r => r.trim() !== '');
-
-                if (preguntas.length !== respuestas.length) {
-                    alert("El número de preguntas y respuestas no coincide.");
-                    return;
-                }
-
-                mostrarNuevaPregunta();
-            } catch (error) {
-                console.error(error);
-                alert('Hubo un error al cargar los archivos.');
-            }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
         }
-
-        function mostrarNuevaPregunta() {
-            const randomIndex = seleccionarPregunta();
-            const preguntaSeleccionada = preguntas[randomIndex];
-            const respuestaSeleccionada = respuestas[randomIndex];
-
-            document.getElementById('pregunta').textContent = preguntaSeleccionada;
-            document.getElementById('respuesta').textContent = '';
-            document.getElementById('botonRespuesta').style.display = 'inline';
-            document.getElementById('botonContinuar').style.display = 'none';
-
-            document.getElementById('botonRespuesta').onclick = () => {
-                document.getElementById('respuesta').textContent = respuestaSeleccionada;
-                document.getElementById('botonRespuesta').style.display = 'none';
-                document.getElementById('botonContinuar').style.display = 'inline';
-            };
-
-            document.getElementById('botonContinuar').onclick = mostrarNuevaPregunta;
+        .menu-item {
+            margin: 20px;
         }
-    </script>
+        .menu-item a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #c70039; /* Rojo estilo casino */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .menu-item a:hover {
+            background-color: #ff5733; /* Rojo más claro al pasar el cursor */
+        }
+    </style>
 </head>
-<body onload="inicializar()">
-    <h1>Juego de Preguntas y Respuestas</h1>
-    <div>
-        <p><strong>Pregunta:</strong> <span id="pregunta">Cargando...</span></p>
-        <button id="botonRespuesta">Mostrar Respuesta</button>
-        <button id="botonContinuar" style="display: none;">Continuar</button>
-        <p><strong>Respuesta:</strong> <span id="respuesta"></span></p>
+<body>
+    <h1>Menú</h1>
+    <div class="menu">
+        <div class="menu-item">
+            <a href="brainers.html">BETS & BRAINERS</a>
+        </div>
+        <div class="menu-item">
+            <a href="vegas_quiz.html">LAS VEGAS QUIZ</a>
+        </div>
+        <div class="menu-item">
+            <a href="reglas.html">REGLAS</a>
+        </div>
     </div>
 </body>
 </html>

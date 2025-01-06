@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a6e0a; /* Fondo verde */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #c70039; /* Rojo estilo casino */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #ff5733; /* Rojo más claro al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <img id="ruleImage" src="reglas/reglas1.jpg" alt="Regla 1">
+    <button id="continueButton">CONTINUAR</button>
+
+    <script>
+        const images = ["reglas/reglas1.jpg", "reglas/reglas2.jpg", "reglas/reglas3.jpg", "reglas/reglas4.jpg"];
+        let currentImageIndex = 0;
+
+        const ruleImage = document.getElementById("ruleImage");
+        const continueButton = document.getElementById("continueButton");
+
+        continueButton.addEventListener("click", () => {
+            currentImageIndex++;
+            if (currentImageIndex < images.length) {
+                ruleImage.src = images[currentImageIndex];
+                if (currentImageIndex === images.length - 1) {
+                    continueButton.textContent = "MENÚ";
+                }
+            } else {
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>
